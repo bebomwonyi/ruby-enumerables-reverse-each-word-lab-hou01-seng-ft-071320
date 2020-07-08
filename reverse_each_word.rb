@@ -1,13 +1,8 @@
 def reverse_each_word(sentence)
-  ss=sentence.reverse
-  sss=ss.split
+  ss=s.split
   ssss=[]
-  sss.each do |a|
-    ssss.unshift(a.split(''))
-  end
-  b=[]
-  ssss.each do |a|
-    b << a.join('')
-  end
-  return bb=b.join(' ')
+  sss=ss.collect {|a|a.reverse}
+  sss.each {|a| ssss.unshift(a)}
+  a = ssss.join(' ')
+  return a
 end
